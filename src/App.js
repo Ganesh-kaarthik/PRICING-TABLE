@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { PriceCard } from "./Pricecards";
 
-function App() {
-  return (
+export default function APP(){
+  const plans = [
+    {
+      type : "FREE",
+      price :  "0",
+      details:{
+        noOfusers: "✔  Single User",
+        storage:   "✔ 5GB Storage",
+        noOfpubproje: "✔ Unlimited Public Projects",
+        access:  "✔  Community Access",
+        noOfpriproje: "❌  Unlimited Private Projects",
+        phone: "❌ Dedicated Phone Support",
+        subDomain: "❌  Free Subdomain",
+        report: "❌  Monthly Status Reports",
+      }
+    },
+    {
+      type : "PLUS",
+      price :  "9",
+      details:{
+        noOfusers: "✔  5 Users",
+        storage:   "✔ 50GB Storage",
+        noOfpubproje: "✔ Unlimited Public Projects",
+        access:  "✔  Community Access",
+        noOfpriproje: "✔  Unlimited Private Projects",
+        phone: "✔ Dedicated Phone Support",
+        subDomain: "✔  Free Subdomain",
+        report: "❌  Monthly Status Reports",
+    }
+  },
+    {
+      type : "PRO",
+      price :  "49",
+      details:{
+        noOfusers: "✔  Unlimited Users",
+        storage:   "✔ 150GB Storage",
+        noOfpubproje: "✔ Unlimited Public Projects",
+        access:  "✔  Community Access",
+        noOfpriproje: "✔  Unlimited Private Projects",
+        phone: "✔ Dedicated Phone Support",
+        subDomain: "✔  Free Subdomain",
+        report: "✔  Monthly Status Reports",
+    }
+  }
+  ];
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PriceCard plans = {plans} />
     </div>
   );
 }
 
-export default App;
